@@ -1,24 +1,444 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HwG-MJ-ub6">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SideHustle-->
+        <scene sceneID="smu-GJ-Hxh">
+            <objects>
+                <tableViewController id="UgE-E9-Wuj" customClass="TotalTableViewController" customModule="sideHustle" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nt0-wu-gd3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="darkModeBackground"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="rzl-9Q-nKH">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="dil-Kx-kmz" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="84" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dil-Kx-kmz" id="yz7-TO-xdT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UgE-E9-Wuj" id="aOR-fW-zI6"/>
+                            <outlet property="delegate" destination="UgE-E9-Wuj" id="sJS-T6-rn8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SideHustle" id="ioa-3b-J16">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="D93-gg-QeD">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="UgE-E9-Wuj" id="KfQ-5o-kOQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pKD-A8-sAN">
+                            <color key="tintColor" name="darkModeText"/>
+                            <connections>
+                                <action selector="newMonthPressed:" destination="UgE-E9-Wuj" id="l2e-Mh-lF9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editButtonLabel" destination="D93-gg-QeD" id="a3a-Jc-RIt"/>
+                        <outlet property="searchBar" destination="rzl-9Q-nKH" id="19j-V4-Q3J"/>
+                        <segue destination="qfw-dw-K9c" kind="show" identifier="SelectedMonth" id="rub-eK-wKd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWn-EL-vhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-927" y="55"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lSk-a1-Fob">
+            <objects>
+                <navigationController id="HwG-MJ-ub6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ETS-kK-lo8">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="darkModeBackground"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UgE-E9-Wuj" kind="relationship" relationship="rootViewController" id="7nu-Pd-cfb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSe-ba-EW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1919" y="55"/>
+        </scene>
+        <!--New Hours View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewHoursViewController" customModule="sideHustle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="8tQ-jk-gJx">
+                                <rect key="frame" x="27.666666666666657" y="76" width="320" height="216"/>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sWP-vM-h4G">
+                                <rect key="frame" x="60" y="301" width="255" height="296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I41-M8-CC1">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description of Bakery" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-rv-u8B">
+                                        <rect key="frame" x="0.0" y="43" width="255" height="38"/>
+                                        <color key="backgroundColor" name="darkModeField"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="DJd-ZT-jUZ"/>
+                                        </constraints>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etk-1H-StU">
+                                        <rect key="frame" x="0.0" y="86" width="255" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bread per day" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOU-8F-iFh">
+                                        <rect key="frame" x="0.0" y="129" width="255" height="38"/>
+                                        <color key="backgroundColor" name="darkModeField"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocy-9c-tnt">
+                                        <rect key="frame" x="0.0" y="172" width="255" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hours Worked" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWQ-rW-bOF">
+                                        <rect key="frame" x="0.0" y="215" width="255" height="38"/>
+                                        <color key="backgroundColor" name="darkModeField"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GiN-ct-b1B">
+                                        <rect key="frame" x="0.0" y="258" width="255" height="39"/>
+                                        <color key="backgroundColor" red="0.027450980390000001" green="0.83529411760000005" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="Daily"/>
+                                            <segment title="Hourly"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" name="darkModeBackground"/>
+                                        <connections>
+                                            <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="GCq-LW-cZm"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ok-ch-ZCH" customClass="ButtonDesign" customModule="sideHustle" customModuleProvider="target">
+                                <rect key="frame" x="95" y="637" width="185" height="52"/>
+                                <color key="backgroundColor" name="darkModeButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="qaJ-38-hQC"/>
+                                </constraints>
+                                <color key="tintColor" name="darkModeText"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4dW-mq-0AA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-CN-cRb">
+                                <rect key="frame" x="60" y="36" width="225" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="darkModeText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="darkModeBackground"/>
+                        <constraints>
+                            <constraint firstItem="Vr4-CN-cRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="0SY-r0-UMh"/>
+                            <constraint firstItem="sWP-vM-h4G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AI8-KC-ws4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sWP-vM-h4G" secondAttribute="trailing" constant="60" id="BY3-PY-EPJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vr4-CN-cRb" secondAttribute="trailing" constant="90" id="ODE-xd-UHm"/>
+                            <constraint firstItem="8tQ-jk-gJx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="OrC-yL-yCg"/>
+                            <constraint firstItem="1ok-ch-ZCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="QVU-CX-vZi"/>
+                            <constraint firstItem="8tQ-jk-gJx" firstAttribute="top" secondItem="Vr4-CN-cRb" secondAttribute="bottom" constant="19.670000000000002" id="c0y-rd-u6o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ok-ch-ZCH" secondAttribute="trailing" constant="95" id="ea8-gz-zXh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1ok-ch-ZCH" secondAttribute="bottom" constant="35" id="oIj-Br-3bC"/>
+                            <constraint firstItem="sWP-vM-h4G" firstAttribute="top" secondItem="8tQ-jk-gJx" secondAttribute="bottom" constant="9" id="p68-JD-icb"/>
+                            <constraint firstItem="sWP-vM-h4G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="uZL-G6-PpZ"/>
+                            <constraint firstItem="1ok-ch-ZCH" firstAttribute="top" secondItem="sWP-vM-h4G" secondAttribute="bottom" constant="40" id="utu-Y7-9qD"/>
+                            <constraint firstItem="8tQ-jk-gJx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhH-7F-Ox2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SUL-wN-LnE"/>
+                    <connections>
+                        <outlet property="addButton" destination="1ok-ch-ZCH" id="V5i-Ew-BuT"/>
+                        <outlet property="descriptionEntered" destination="nnE-rv-u8B" id="q7I-wi-lDh"/>
+                        <outlet property="hourlyDailyLabel" destination="ocy-9c-tnt" id="yEL-XT-E7D"/>
+                        <outlet property="hoursEntered" destination="nWQ-rW-bOF" id="6q4-bJ-ZKv"/>
+                        <outlet property="rateEntered" destination="oOU-8F-iFh" id="mUb-C9-fCN"/>
+                        <outlet property="segmentControl" destination="GiN-ct-b1B" id="ssE-4L-PGV"/>
+                        <outlet property="workDayPicker" destination="8tQ-jk-gJx" id="afN-8U-HTs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1344.8" y="-257.14285714285717"/>
+        </scene>
+        <!--Weekly View Controller-->
+        <scene sceneID="ezK-tD-oHb">
+            <objects>
+                <viewController id="qfw-dw-K9c" customClass="WeeklyViewController" customModule="sideHustle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pLw-1j-9mf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbo-ef-whb">
+                                <rect key="frame" x="0.0" y="88" width="375" height="612"/>
+                                <color key="backgroundColor" name="darkModeBackground"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailyCell" id="TMK-pz-dpC" customClass="WeeklyCell" customModule="sideHustle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TMK-pz-dpC" id="WPf-yJ-prY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5c-m4-mP2">
+                                <rect key="frame" x="0.0" y="700" width="375" height="78"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="l3d-Jy-4wC">
+                                        <rect key="frame" x="72.000000000000014" y="34" width="231.33333333333337" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: $0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaM-pL-KG4">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.027450980392156862" green="0.83529411764705885" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-cE-Sf6">
+                                                <rect key="frame" x="141.33333333333334" y="0.0" width="90" height="20.333333333333332"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-kF-xly">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWw-pv-XNx">
+                                                        <rect key="frame" x="55.666666666666657" y="0.0" width="34.333333333333343" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.30980392156862746" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="l3d-Jy-4wC" firstAttribute="centerY" secondItem="M5c-m4-mP2" secondAttribute="centerY" constant="5" id="9DU-9c-ZC2"/>
+                                    <constraint firstAttribute="height" constant="78" id="fXg-MD-YBb"/>
+                                    <constraint firstItem="l3d-Jy-4wC" firstAttribute="centerX" secondItem="M5c-m4-mP2" secondAttribute="centerX" id="uRI-yR-m0W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.30980392156862746" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rbo-ef-whb" firstAttribute="trailing" secondItem="ciV-WS-D3D" secondAttribute="trailing" id="EYw-Vf-QrO"/>
+                            <constraint firstItem="M5c-m4-mP2" firstAttribute="leading" secondItem="ciV-WS-D3D" secondAttribute="leading" id="G9r-rh-ufU"/>
+                            <constraint firstItem="rbo-ef-whb" firstAttribute="centerX" secondItem="pLw-1j-9mf" secondAttribute="centerX" id="Oug-TY-rm6"/>
+                            <constraint firstItem="M5c-m4-mP2" firstAttribute="top" secondItem="rbo-ef-whb" secondAttribute="bottom" id="PEi-M7-Ynk"/>
+                            <constraint firstItem="rbo-ef-whb" firstAttribute="top" secondItem="ciV-WS-D3D" secondAttribute="top" id="SXB-p8-ob6"/>
+                            <constraint firstItem="rbo-ef-whb" firstAttribute="top" secondItem="ciV-WS-D3D" secondAttribute="top" id="a16-kY-huH"/>
+                            <constraint firstItem="rbo-ef-whb" firstAttribute="leading" secondItem="ciV-WS-D3D" secondAttribute="leading" id="c5U-We-7Rn"/>
+                            <constraint firstItem="M5c-m4-mP2" firstAttribute="bottom" secondItem="ciV-WS-D3D" secondAttribute="bottom" id="phC-rh-Dav"/>
+                            <constraint firstItem="M5c-m4-mP2" firstAttribute="trailing" secondItem="ciV-WS-D3D" secondAttribute="trailing" id="zkq-li-8d5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ciV-WS-D3D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sQ2-zJ-E7E">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Lnu-as-Qxf">
+                            <color key="tintColor" name="darkModeText"/>
+                            <connections>
+                                <action selector="addDayPressed:" destination="qfw-dw-K9c" id="SDw-Zh-aej"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hoursOrDailyLabel" destination="G9p-kF-xly" id="GPT-Tb-RSY"/>
+                        <outlet property="hoursOrDailyValue" destination="RWw-pv-XNx" id="O5d-et-Vpm"/>
+                        <outlet property="tableView" destination="rbo-ef-whb" id="7bL-0v-HdH"/>
+                        <outlet property="totalLabel" destination="PaM-pL-KG4" id="4ex-hU-QIR"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="InputWorkDay" id="FIM-E6-6c9"/>
+                        <segue destination="FXw-qA-xAz" kind="presentation" identifier="EditWorkDay" id="yCj-DC-ygX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlg-aZ-68C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="54.679802955665025"/>
+        </scene>
+        <!--Edit Hours View Controller-->
+        <scene sceneID="WhB-Gf-aOy">
+            <objects>
+                <viewController id="FXw-qA-xAz" customClass="EditHoursViewController" customModule="sideHustle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYK-ZX-0tN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-wt-kzJ">
+                                <rect key="frame" x="27.666666666666657" y="80" width="320" height="216"/>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lW3-DF-eOd">
+                                <rect key="frame" x="60" y="301" width="255" height="296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-MV-0IQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description of Bakery" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLW-Sl-5ow">
+                                        <rect key="frame" x="0.0" y="43" width="255" height="38"/>
+                                        <color key="backgroundColor" name="darkModeField"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="X5z-vz-zwK"/>
+                                        </constraints>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuv-xQ-GTR">
+                                        <rect key="frame" x="0.0" y="86" width="255" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c27-Qe-YWb">
+                                        <rect key="frame" x="0.0" y="129" width="255" height="38"/>
+                                        <color key="backgroundColor" name="darkModeField"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmO-Rt-JfL">
+                                        <rect key="frame" x="0.0" y="172" width="255" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjg-Ug-lBd">
+                                        <rect key="frame" x="0.0" y="215" width="255" height="38"/>
+                                        <color key="backgroundColor" name="darkModeField"/>
+                                        <color key="textColor" name="darkModeText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-Kh-OvG">
+                                        <rect key="frame" x="0.0" y="258" width="255" height="39"/>
+                                        <color key="backgroundColor" red="0.027450980390000001" green="0.83529411760000005" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="Daily"/>
+                                            <segment title="Hourly"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" name="darkModeBackground"/>
+                                        <connections>
+                                            <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="9GO-xg-NF8"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J4-0T-qPn" customClass="ButtonDesign" customModule="sideHustle" customModuleProvider="target">
+                                <rect key="frame" x="95" y="637" width="185" height="52"/>
+                                <color key="backgroundColor" name="darkModeButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="29i-8e-yS1"/>
+                                </constraints>
+                                <color key="tintColor" name="darkModeText"/>
+                                <state key="normal" title="UPDATE">
+                                    <color key="titleColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updatePressed:" destination="FXw-qA-xAz" eventType="touchUpInside" id="umq-Zw-19Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit a day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoi-ir-0lb">
+                                <rect key="frame" x="60" y="51" width="96" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="darkModeText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="darkModeBackground"/>
+                        <constraints>
+                            <constraint firstItem="Hoi-ir-0lb" firstAttribute="leading" secondItem="2ML-C4-tE5" secondAttribute="leading" constant="60" id="3xl-JU-Ldf"/>
+                            <constraint firstItem="2ML-C4-tE5" firstAttribute="trailing" secondItem="8J4-0T-qPn" secondAttribute="trailing" constant="95" id="7A8-gr-uBJ"/>
+                            <constraint firstItem="2ML-C4-tE5" firstAttribute="trailing" secondItem="lW3-DF-eOd" secondAttribute="trailing" constant="60" id="Chx-TP-Yex"/>
+                            <constraint firstItem="Yja-wt-kzJ" firstAttribute="top" secondItem="Hoi-ir-0lb" secondAttribute="bottom" constant="8.6699999999999999" id="DYG-b8-X5n"/>
+                            <constraint firstItem="Yja-wt-kzJ" firstAttribute="top" secondItem="2ML-C4-tE5" secondAttribute="top" constant="80" id="FT2-8x-PLH"/>
+                            <constraint firstItem="8J4-0T-qPn" firstAttribute="leading" secondItem="2ML-C4-tE5" secondAttribute="leading" constant="95" id="FXw-7Z-RGp"/>
+                            <constraint firstItem="2ML-C4-tE5" firstAttribute="trailing" secondItem="Hoi-ir-0lb" secondAttribute="trailing" constant="219" id="JSg-DI-kWI"/>
+                            <constraint firstItem="2ML-C4-tE5" firstAttribute="bottom" secondItem="8J4-0T-qPn" secondAttribute="bottom" constant="35" id="LZN-x3-KGQ"/>
+                            <constraint firstItem="lW3-DF-eOd" firstAttribute="leading" secondItem="2ML-C4-tE5" secondAttribute="leading" constant="60" id="QSi-Jw-2ae"/>
+                            <constraint firstItem="Yja-wt-kzJ" firstAttribute="centerX" secondItem="PYK-ZX-0tN" secondAttribute="centerX" id="a74-27-mRK"/>
+                            <constraint firstItem="8J4-0T-qPn" firstAttribute="top" secondItem="lW3-DF-eOd" secondAttribute="bottom" constant="40" id="rVn-1I-ml2"/>
+                            <constraint firstItem="lW3-DF-eOd" firstAttribute="centerX" secondItem="PYK-ZX-0tN" secondAttribute="centerX" id="uwQ-3x-NJx"/>
+                            <constraint firstItem="lW3-DF-eOd" firstAttribute="top" secondItem="Yja-wt-kzJ" secondAttribute="bottom" constant="5" id="yRt-LZ-H36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2ML-C4-tE5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vdY-Qe-3zg"/>
+                    <connections>
+                        <outlet property="descriptionEdited" destination="rLW-Sl-5ow" id="zEF-lj-YGE"/>
+                        <outlet property="hourDailyLabel" destination="pmO-Rt-JfL" id="aUm-DK-D8Q"/>
+                        <outlet property="hoursEdited" destination="qjg-Ug-lBd" id="UKM-CQ-TP7"/>
+                        <outlet property="rateEdited" destination="c27-Qe-YWb" id="gRg-fi-MF4"/>
+                        <outlet property="segmentControl" destination="kYP-Kh-OvG" id="bha-H9-xft"/>
+                        <outlet property="updateButton" destination="8J4-0T-qPn" id="E8i-WU-795"/>
+                        <outlet property="workDayEdited" destination="Yja-wt-kzJ" id="Ic7-Rw-Maw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17f-Dn-Fkg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="518"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="darkModeBackground">
+            <color red="0.97299998998641968" green="0.96899998188018799" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkModeButton">
+            <color red="0.14499999582767487" green="0.14499999582767487" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkModeField">
+            <color red="0.97299998998641968" green="0.96899998188018799" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkModeText">
+            <color red="0.14499999582767487" green="0.14499999582767487" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="darkModeText"/>
 </document>

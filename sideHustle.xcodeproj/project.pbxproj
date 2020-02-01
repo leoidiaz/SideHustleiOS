@@ -3,27 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2916C23923E4FA3900F22E9C /* ObjectDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916C23823E4FA3900F22E9C /* ObjectDesign.swift */; };
+		29217D6E23C56507004FD302 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29217D6D23C56507004FD302 /* SwipeTableViewController.swift */; };
+		2923DA2E23E3BA450049904E /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923DA2D23E3BA450049904E /* ButtonDesign.swift */; };
+		29465B0D23C414DF00997042 /* WeeklyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29465B0B23C414DF00997042 /* WeeklyCell.swift */; };
+		29465B0E23C414DF00997042 /* WeeklyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29465B0C23C414DF00997042 /* WeeklyCell.xib */; };
 		299159A723C3B6B5005F7E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159A623C3B6B5005F7E83 /* AppDelegate.swift */; };
 		299159A923C3B6B5005F7E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159A823C3B6B5005F7E83 /* SceneDelegate.swift */; };
-		299159AB23C3B6B5005F7E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159AA23C3B6B5005F7E83 /* ViewController.swift */; };
 		299159AE23C3B6B5005F7E83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299159AC23C3B6B5005F7E83 /* Main.storyboard */; };
 		299159B023C3B6B6005F7E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299159AF23C3B6B6005F7E83 /* Assets.xcassets */; };
 		299159B323C3B6B6005F7E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299159B123C3B6B6005F7E83 /* LaunchScreen.storyboard */; };
+		299159C923C3B814005F7E83 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159C323C3B814005F7E83 /* Total.swift */; };
+		299159CA23C3B814005F7E83 /* NewHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159C423C3B814005F7E83 /* NewHoursViewController.swift */; };
+		299159CB23C3B814005F7E83 /* Weekly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159C523C3B814005F7E83 /* Weekly.swift */; };
+		299159CD23C3B814005F7E83 /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299159C723C3B814005F7E83 /* TotalTableViewController.swift */; };
+		29A7C10E23D7FCCE00CD0FE4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A7C10D23D7FCCE00CD0FE4 /* Alert.swift */; };
+		29F4FBB923CE4556008FEBED /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4FBB823CE4556008FEBED /* EditHoursViewController.swift */; };
+		29FEB53A23C66AB10084F70F /* WeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEB53923C66AB10084F70F /* WeeklyViewController.swift */; };
+		5C78A44036F2B97E2A479A01 /* Pods_sideHustle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F4BB1167C4F3A1CBC6E147 /* Pods_sideHustle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05FFD3BF31DDC23344E7D29E /* Pods-sideHustle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sideHustle.release.xcconfig"; path = "Target Support Files/Pods-sideHustle/Pods-sideHustle.release.xcconfig"; sourceTree = "<group>"; };
+		2916C23823E4FA3900F22E9C /* ObjectDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDesign.swift; sourceTree = "<group>"; };
+		29217D6D23C56507004FD302 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		2923DA2D23E3BA450049904E /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
+		29465B0B23C414DF00997042 /* WeeklyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCell.swift; sourceTree = "<group>"; };
+		29465B0C23C414DF00997042 /* WeeklyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklyCell.xib; sourceTree = "<group>"; };
 		299159A323C3B6B5005F7E83 /* sideHustle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sideHustle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299159A623C3B6B5005F7E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		299159A823C3B6B5005F7E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		299159AA23C3B6B5005F7E83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		299159AD23C3B6B5005F7E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		299159AF23C3B6B6005F7E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		299159B223C3B6B6005F7E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		299159B423C3B6B6005F7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		299159C323C3B814005F7E83 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
+		299159C423C3B814005F7E83 /* NewHoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHoursViewController.swift; sourceTree = "<group>"; };
+		299159C523C3B814005F7E83 /* Weekly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weekly.swift; sourceTree = "<group>"; };
+		299159C723C3B814005F7E83 /* TotalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
+		29A7C10D23D7FCCE00CD0FE4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		29F4FBB823CE4556008FEBED /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
+		29FEB53923C66AB10084F70F /* WeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
+		9EAC14D336743A253D05014E /* Pods-sideHustle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sideHustle.debug.xcconfig"; path = "Target Support Files/Pods-sideHustle/Pods-sideHustle.debug.xcconfig"; sourceTree = "<group>"; };
+		E4F4BB1167C4F3A1CBC6E147 /* Pods_sideHustle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sideHustle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C78A44036F2B97E2A479A01 /* Pods_sideHustle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215B79714E9D82DD5CA06BE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EAC14D336743A253D05014E /* Pods-sideHustle.debug.xcconfig */,
+				05FFD3BF31DDC23344E7D29E /* Pods-sideHustle.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		29465B0F23C414E600997042 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29465B0B23C414DF00997042 /* WeeklyCell.swift */,
+				29465B0C23C414DF00997042 /* WeeklyCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2991599A23C3B6B5005F7E83 = {
 			isa = PBXGroup;
 			children = (
 				299159A523C3B6B5005F7E83 /* sideHustle */,
 				299159A423C3B6B5005F7E83 /* Products */,
+				215B79714E9D82DD5CA06BE5 /* Pods */,
+				B05B8459C25380C3206F64FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +105,47 @@
 			children = (
 				299159A623C3B6B5005F7E83 /* AppDelegate.swift */,
 				299159A823C3B6B5005F7E83 /* SceneDelegate.swift */,
-				299159AA23C3B6B5005F7E83 /* ViewController.swift */,
+				299159CF23C3B81B005F7E83 /* Model */,
+				299159D023C3B82B005F7E83 /* Controllers */,
 				299159AC23C3B6B5005F7E83 /* Main.storyboard */,
+				29465B0F23C414E600997042 /* Views */,
 				299159AF23C3B6B6005F7E83 /* Assets.xcassets */,
 				299159B123C3B6B6005F7E83 /* LaunchScreen.storyboard */,
 				299159B423C3B6B6005F7E83 /* Info.plist */,
 			);
 			path = sideHustle;
+			sourceTree = "<group>";
+		};
+		299159CF23C3B81B005F7E83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				299159C323C3B814005F7E83 /* Total.swift */,
+				299159C523C3B814005F7E83 /* Weekly.swift */,
+				29A7C10D23D7FCCE00CD0FE4 /* Alert.swift */,
+				2923DA2D23E3BA450049904E /* ButtonDesign.swift */,
+				2916C23823E4FA3900F22E9C /* ObjectDesign.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		299159D023C3B82B005F7E83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29217D6D23C56507004FD302 /* SwipeTableViewController.swift */,
+				299159C723C3B814005F7E83 /* TotalTableViewController.swift */,
+				29FEB53923C66AB10084F70F /* WeeklyViewController.swift */,
+				299159C423C3B814005F7E83 /* NewHoursViewController.swift */,
+				29F4FBB823CE4556008FEBED /* EditHoursViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B05B8459C25380C3206F64FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4F4BB1167C4F3A1CBC6E147 /* Pods_sideHustle.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 299159B723C3B6B6005F7E83 /* Build configuration list for PBXNativeTarget "sideHustle" */;
 			buildPhases = (
+				056BCC3793AB906925241BC3 /* [CP] Check Pods Manifest.lock */,
 				2991599F23C3B6B5005F7E83 /* Sources */,
 				299159A023C3B6B5005F7E83 /* Frameworks */,
 				299159A123C3B6B5005F7E83 /* Resources */,
+				0829325BC1F8C904330798B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29465B0E23C414DF00997042 /* WeeklyCell.xib in Resources */,
 				299159B323C3B6B6005F7E83 /* LaunchScreen.storyboard in Resources */,
 				299159B023C3B6B6005F7E83 /* Assets.xcassets in Resources */,
 				299159AE23C3B6B5005F7E83 /* Main.storyboard in Resources */,
@@ -133,13 +217,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		056BCC3793AB906925241BC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sideHustle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0829325BC1F8C904330798B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sideHustle/Pods-sideHustle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sideHustle/Pods-sideHustle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sideHustle/Pods-sideHustle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2991599F23C3B6B5005F7E83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299159AB23C3B6B5005F7E83 /* ViewController.swift in Sources */,
+				29465B0D23C414DF00997042 /* WeeklyCell.swift in Sources */,
 				299159A723C3B6B5005F7E83 /* AppDelegate.swift in Sources */,
+				29F4FBB923CE4556008FEBED /* EditHoursViewController.swift in Sources */,
+				2923DA2E23E3BA450049904E /* ButtonDesign.swift in Sources */,
+				29FEB53A23C66AB10084F70F /* WeeklyViewController.swift in Sources */,
+				2916C23923E4FA3900F22E9C /* ObjectDesign.swift in Sources */,
+				299159CB23C3B814005F7E83 /* Weekly.swift in Sources */,
+				29217D6E23C56507004FD302 /* SwipeTableViewController.swift in Sources */,
+				299159CD23C3B814005F7E83 /* TotalTableViewController.swift in Sources */,
+				299159C923C3B814005F7E83 /* Total.swift in Sources */,
+				29A7C10E23D7FCCE00CD0FE4 /* Alert.swift in Sources */,
+				299159CA23C3B814005F7E83 /* NewHoursViewController.swift in Sources */,
 				299159A923C3B6B5005F7E83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +418,7 @@
 		};
 		299159B823C3B6B6005F7E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAC14D336743A253D05014E /* Pods-sideHustle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +437,7 @@
 		};
 		299159B923C3B6B6005F7E83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FFD3BF31DDC23344E7D29E /* Pods-sideHustle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
