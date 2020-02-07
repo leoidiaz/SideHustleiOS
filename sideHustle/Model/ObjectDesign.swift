@@ -27,18 +27,20 @@ struct ObjectDesign {
 //    }
     
     mutating func applyDesign(){
-       segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(named: "darkModeText")!], for: .normal)
-       segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(named:"darkModeText")!], for: .selected)
-       button.layer.cornerRadius = 20.0
-       rate.layer.borderWidth = 1
-       rate.layer.borderColor = UIColor.black.cgColor
-       rate.layer.cornerRadius = 5.0
-       description.layer.borderWidth = 1
-       description.layer.borderColor = UIColor.black.cgColor
-       description.layer.cornerRadius = 5.0
-       hours.layer.borderWidth = 1
-       hours.layer.borderColor = UIColor.black.cgColor
-       hours.layer.cornerRadius = 5.0
+        let normalFont = UIFont(name: "Galvji", size: 16.0)
+        
+        segment.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor : UIColor(named: "darkModeText")!, NSAttributedString.Key.font: normalFont!], for: .normal)
+        segment.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor : UIColor(named:"darkModeText")!, NSAttributedString.Key.font: normalFont!], for: .selected)
+        button.layer.cornerRadius = 20.0
+        rate.layer.borderWidth = 1
+        rate.layer.borderColor = UIColor.black.cgColor
+        rate.layer.cornerRadius = 5.0
+        description.layer.borderWidth = 1
+        description.layer.borderColor = UIColor.black.cgColor
+        description.layer.cornerRadius = 5.0
+        hours.layer.borderWidth = 1
+        hours.layer.borderColor = UIColor.black.cgColor
+        hours.layer.cornerRadius = 5.0
     }
     
     

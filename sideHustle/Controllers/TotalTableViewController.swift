@@ -23,6 +23,10 @@ class TotalTableViewController: SwipeTableViewController {
     
     var editActive = false
 
+    
+    
+    
+    
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
         editActive = !editActive
         if editActive {
@@ -35,6 +39,8 @@ class TotalTableViewController: SwipeTableViewController {
             searchBar.isHidden = false
         }
     }
+    
+    
     
     
     override func viewDidLoad() {
@@ -52,7 +58,7 @@ class TotalTableViewController: SwipeTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        
+        cell.textLabel?.font = UIFont(name: "Avenir Next-Medium", size: 16.0)
         cell.textLabel?.text = months?[indexPath.row].totalName ?? "No Months added yet"
         cell.backgroundColor = UIColor(named: "darkModeBackground")
 

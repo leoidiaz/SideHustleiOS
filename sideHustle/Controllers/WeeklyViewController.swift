@@ -21,6 +21,8 @@ class WeeklyViewController: UIViewController {
     var rowSelected = 0
     let realm = try! Realm()
     
+
+    
     var selectedMonth: Total? {
         didSet{
             loadDays()
@@ -31,6 +33,7 @@ class WeeklyViewController: UIViewController {
         title = selectedMonth!.totalName
         sumTotal()
         labelUpdate()
+
     }
     
     

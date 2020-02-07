@@ -71,6 +71,9 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="darkModeBackground"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="UgE-E9-Wuj" kind="relationship" relationship="rootViewController" id="7nu-Pd-cfb"/>
@@ -96,7 +99,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I41-M8-CC1">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                         <color key="textColor" name="darkModeText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -107,12 +110,12 @@
                                             <constraint firstAttribute="height" constant="38" id="DJd-ZT-jUZ"/>
                                         </constraints>
                                         <color key="textColor" name="darkModeText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etk-1H-StU">
                                         <rect key="frame" x="0.0" y="86" width="255" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                         <color key="textColor" name="darkModeText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -120,12 +123,12 @@
                                         <rect key="frame" x="0.0" y="129" width="255" height="38"/>
                                         <color key="backgroundColor" name="darkModeField"/>
                                         <color key="textColor" name="darkModeText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocy-9c-tnt">
                                         <rect key="frame" x="0.0" y="172" width="255" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                         <color key="textColor" name="darkModeText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -133,7 +136,7 @@
                                         <rect key="frame" x="0.0" y="215" width="255" height="38"/>
                                         <color key="backgroundColor" name="darkModeField"/>
                                         <color key="textColor" name="darkModeText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GiN-ct-b1B">
@@ -156,6 +159,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="qaJ-38-hQC"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <color key="tintColor" name="darkModeText"/>
                                 <state key="normal" title="ADD">
                                     <color key="titleColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,7 +170,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-CN-cRb">
                                 <rect key="frame" x="60" y="36" width="225" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <color key="textColor" name="darkModeText"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -230,26 +234,26 @@
                                 <rect key="frame" x="0.0" y="700" width="375" height="78"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="l3d-Jy-4wC">
-                                        <rect key="frame" x="72.000000000000014" y="34" width="231.33333333333337" height="20.333333333333329"/>
+                                        <rect key="frame" x="62.000000000000014" y="34" width="251.33333333333337" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: $0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaM-pL-KG4">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                                 <color key="textColor" red="0.027450980392156862" green="0.83529411764705885" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-cE-Sf6">
-                                                <rect key="frame" x="141.33333333333334" y="0.0" width="90" height="20.333333333333332"/>
+                                                <rect key="frame" x="151" y="0.0" width="100.33333333333331" height="20.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-kF-xly">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="20.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="56.333333333333336" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWw-pv-XNx">
-                                                        <rect key="frame" x="55.666666666666657" y="0.0" width="34.333333333333343" height="20.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="61.333333333333314" y="0.0" width="39" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -317,7 +321,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-MV-0IQ">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                         <color key="textColor" name="darkModeText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -328,12 +332,12 @@
                                             <constraint firstAttribute="height" constant="38" id="X5z-vz-zwK"/>
                                         </constraints>
                                         <color key="textColor" name="darkModeText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuv-xQ-GTR">
                                         <rect key="frame" x="0.0" y="86" width="255" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                         <color key="textColor" name="darkModeText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -341,12 +345,12 @@
                                         <rect key="frame" x="0.0" y="129" width="255" height="38"/>
                                         <color key="backgroundColor" name="darkModeField"/>
                                         <color key="textColor" name="darkModeText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmO-Rt-JfL">
                                         <rect key="frame" x="0.0" y="172" width="255" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                         <color key="textColor" name="darkModeText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -354,7 +358,7 @@
                                         <rect key="frame" x="0.0" y="215" width="255" height="38"/>
                                         <color key="backgroundColor" name="darkModeField"/>
                                         <color key="textColor" name="darkModeText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-Kh-OvG">
@@ -377,6 +381,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="29i-8e-yS1"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <color key="tintColor" name="darkModeText"/>
                                 <state key="normal" title="UPDATE">
                                     <color key="titleColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -387,7 +392,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit a day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoi-ir-0lb">
                                 <rect key="frame" x="60" y="51" width="96" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <color key="textColor" name="darkModeText"/>
                                 <nil key="highlightedColor"/>
                             </label>
