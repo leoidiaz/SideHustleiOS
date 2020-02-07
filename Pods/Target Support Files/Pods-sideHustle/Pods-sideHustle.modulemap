@@ -1,6 +1,0 @@
-framework module Pods_sideHustle {
-  umbrella header "Pods-sideHustle-umbrella.h"
-
-  export *
-  module * { export * }
-}
